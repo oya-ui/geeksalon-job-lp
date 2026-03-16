@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"/><title>Form detection</title></head>
+<body>
+<form name="application" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/#cta">
+  <input type="hidden" name="form-name" value="application" />
+  <p class="hidden"><label>Don't fill: <input name="bot-field" /></label></p>
+  <p><label>お名前 <input type="text" name="name" required /></label></p>
+  <p><label>メールアドレス <input type="email" name="email" required /></label></p>
+  <p><label>相談したいこと・メッセージ <textarea name="message"></textarea></label></p>
+  <p><button type="submit">送信</button></p>
+</form>
+</body>
+</html>
