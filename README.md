@@ -7,7 +7,8 @@
 - **Next.js** (App Router)
 - **Tailwind CSS**
 - **Lucide React**（アイコン）
-- **Netlify** ホスティング・Netlify Forms（応募フォーム送信）
+- **Netlify** ホスティング
+- **Googleフォーム**（キャリア面談のお申し込み）
 
 ## 開発
 
@@ -25,7 +26,7 @@ npm run dev
    - ビルドコマンド: `npm run build`
    - 公開ディレクトリ: **指定しない**（`@netlify/plugin-nextjs` が自動設定）
    - Node バージョン: 18 推奨（`netlify.toml` で設定済み）
-3. デプロイ後、Netlify ダッシュボードの **Forms** で「application」フォームの送信内容を確認可能
+3. デプロイ後、LP の「キャリア面談を申し込む」ボタンから Google フォームへ遷移します
 
 ### デプロイ後にサイトがおかしい場合の確認
 
@@ -35,11 +36,10 @@ npm run dev
 - デザインが崩れる場合: ビルドログで Tailwind のコンパイルが成功しているか確認（`content` に `src/**/*` を含め済み）
 - 画像が表示されない場合: `public/images/` 以下のファイルがリポジトリにコミットされているか確認
 
-### フォームについて
+### お申し込みフォームについて
 
-- 応募フォームは **Netlify Forms** で送信されます
-- `public/__forms.html` に同じ `name` のフォームを定義してあり、デプロイ時に Netlify がフォームを検知します
-- 送信先は Netlify の「Forms」一覧から確認・メール通知の設定ができます
+- LP 下部のボタンから **[Geek卒業生向けキャリア面談申し込みフォーム](https://docs.google.com/forms/d/e/1FAIpQLSdtKLwzdJT5GC36pRqGwl1FojLv6rd8daYkFfoF-onpc6b2zQ/viewform)**（Googleフォーム）へ遷移します。
+- 回答データは **Googleフォームの管理画面**（回答のスプレッドシート連携など）で確認できます。URLの変更は `src/app/page.tsx` の `GOOGLE_FORM_URL` を編集してください。
 
 ## 画像の配置
 
@@ -56,11 +56,3 @@ npm run dev
 - `pwc.png` — PwCコンサルティング合同会社
 
 未配置の場合は企業名のみ表示されます。
-
-### 受講生の写真
-
-`public/images/students/` に以下のファイル名で配置すると、「一緒に頑張る仲間」セクションに表示されます。
-
-- `student-1.png`, `student-2.png`, `student-3.png`
-
-未配置の場合は「写真を追加」のプレースホルダーが表示されます。

@@ -5,8 +5,11 @@ import {
   Quote,
   MessageCircle,
 } from "lucide-react";
-import { CTAForm } from "@/components/CTAForm";
 import { PartnerLogo } from "@/components/PartnerLogo";
+
+/** Geek卒業生向けキャリア面談申し込み（Googleフォーム） */
+const GOOGLE_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSdtKLwzdJT5GC36pRqGwl1FojLv6rd8daYkFfoF-onpc6b2zQ/viewform?usp=header";
 
 const LOGO_URL = "/images/logo.png";
 const MENTOR_OTANI_IMAGE = "/images/mentor-otani.png";
@@ -301,20 +304,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA + Form - 爽快な濃いめトーン */}
+      {/* CTA - Googleフォームへ誘導 */}
       <section id="cta" className="relative py-16 sm:py-20 overflow-hidden bg-gradient-to-br from-navy-800 via-navy-700 to-sky-900">
         <div className="absolute top-0 left-1/4 w-[400px] h-[400px] rounded-full bg-sky-500/10 blur-3xl" aria-hidden />
         <div className="absolute bottom-0 right-0 w-[320px] h-[320px] rounded-full bg-emerald-500/10 blur-3xl" aria-hidden />
         <div className="relative max-w-2xl mx-auto px-4">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
               無料で応募する
             </h2>
-            <p className="text-navy-300">
-              28卒・GeekSalon受講生・卒業生限定。以下のフォームからお申し込みください。
+            <p className="text-navy-300 mb-4">
+              28卒・GeekSalon受講生・卒業生限定。下のボタンからキャリア面談のお申し込みフォームへ進んでください。
+            </p>
+            <p className="text-navy-200 text-sm leading-relaxed">
+              フォーム送信後、GeekSalonの公式LINEから<strong className="text-white">5営業日以内</strong>に日程調整のURLをお送りします。
             </p>
           </div>
-          <CTAForm />
+          <a
+            href={GOOGLE_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex w-full items-center justify-center gap-2 py-4 rounded-xl bg-accent-gold text-navy-950 font-bold hover:bg-accent-coral hover:text-white transition-colors shadow-lg"
+          >
+            キャリア面談を申し込む
+            <ChevronRight className="w-5 h-5" />
+          </a>
+          <p className="text-center text-navy-400 text-xs mt-4">
+            新しいタブでGoogleフォームが開きます
+          </p>
         </div>
       </section>
 
