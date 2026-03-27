@@ -39,7 +39,9 @@ export default function Home() {
             </span>
           </a>
           <a
-            href="#cta"
+            href={GOOGLE_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm font-medium text-accent-gold hover:text-accent-coral transition-colors"
           >
             応募する
@@ -76,7 +78,9 @@ export default function Home() {
             自己分析から企業紹介・選考対策まで。GeekSalon卒業生を10000人以上みてきた就活のプロが、あなたの人生を決める就活を伴走します。
           </p>
           <a
-            href="#cta"
+            href={GOOGLE_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-accent-gold text-navy-900 font-bold px-8 py-4 rounded-xl hover:bg-accent-coral hover:text-white transition-all shadow-lg hover:shadow-xl"
           >
             無料で応募する
@@ -167,7 +171,7 @@ export default function Home() {
                 GeekSalonの経験を活用して難関企業に合格したOBが、あなたの就活のお悩みに徹底的に向き合います。お気軽に登録してください。
               </p>
               <a
-                href="https://calendar.app.google/cAPVLvsSRwJ4sV8f8"
+                href={GOOGLE_FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-navy-800 font-bold px-6 py-3 rounded-xl hover:bg-accent-gold hover:text-navy-900 transition-colors"
